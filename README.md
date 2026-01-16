@@ -64,13 +64,13 @@ Rate-limit kurallarına uygun şekilde kullanılmıştır.
 
 ## 🌐 Canlı Demo
 
-🔗 **Netlify / GitHub Pages Linki:**  
+🔗 **GitHub Pages Linki:** https://kadirsahin78.github.io/animehub/about.html  
 
 ---
 
 ## 🎥 Proje Tanıtım Videosu
 
-🔗 **YouTube / Drive Video Linki:**  
+🔗 **YouTube Video Linki:** https://youtu.be/4lMlE4e4yfo 
 
 ---
 
