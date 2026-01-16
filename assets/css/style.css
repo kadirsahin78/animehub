@@ -1,0 +1,186 @@
+/* AnimeHub - Full Width PWA Theme */
+
+:root {
+    --bg-dark: #0f111a;        /* Ana Arka Plan */
+    --bg-panel: #161b22;       /* Nav ve Panel Arka Planı */
+    --accent: #ff4655;         /* Tema Rengi (Kırmızı) */
+    --text-main: #ffffff;
+    --text-muted: #9ba3af;
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+/* 1. Tüm Sayfayı Kaplayan Temel Ayarlar */
+html, body {
+    background-color: var(--bg-dark) !important;
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* 2. Navigasyon - Tam Genişlik */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%; /* Kenarlardan çok az pay bırakır ama yayılır */
+    background: var(--bg-panel);
+    border-bottom: 2px solid var(--accent);
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* 3. Banner / Hero Kısmı - Tam Ekran */
+.hero-banner {
+    width: 100%;
+    padding: 100px 5%;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-panel) 0%, var(--bg-dark) 100%);
+    box-sizing: border-box;
+}
+
+.hero-banner h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem); /* Ekrana göre büyür küçülür */
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 0 25px rgba(255, 70, 85, 0.4);
+}
+
+/* 4. İçerik Alanları (Hakkımızda, İletişim, Liste) - Sıkıştırmayı Kaldırdık */
+section, .content-area {
+    width: 100%;
+    padding: 50px 5%;
+    box-sizing: border-box;
+}
+
+/* Kartların Dizilimi (Tam sayfaya yayılır) */
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+.anime-card {
+    background: var(--bg-panel);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: 0.4s;
+}
+
+.anime-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+}
+
+/* 5. Hakkımızda ve İletişim İçin Özel Geniş Tasarım */
+.about-text, .contact-container {
+    width: 100%;
+    background: var(--bg-panel);
+    padding: 60px 5%;
+    border-radius: 0; /* Sayfaya tam sığması için yuvarlatmayı kaldırdık */
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+/* İletişim Formu Elemanları */
+input, textarea {
+    width: 100%;
+    max-width: 800px; /* Sadece inputlar çok yayılmasın diye limit koyduk */
+    background: #0a0c10;
+    border: 1px solid var(--border);
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: block;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Mobil Alt Menü (Opsiyonel) */
+@media (max-width: 768px) {
+    nav { padding: 1rem 5%; }
+    .hero-banner h1 { font-size: 2.5rem; }
+}
+
+/* --- NOKTA ATIŞI DÜZELTMELER --- */
+
+/* 1. Görünmeyen Başlığı Parlat ve Görünür Yap */
+.hero-banner h1, .main-title, h1 {
+    color: #ff4655 !important; /* Tema kırmızısı */
+    text-shadow: 0 0 15px rgba(255, 70, 85, 0.6) !important;
+    -webkit-text-fill-color: initial !important; /* Eğer gradient bozuyorsa bunu ekle */
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* 2. Hakkımızda ve İletişim Sayfalarındaki "Görünmeyen" Yazıları Beyaz Yap */
+.about-section p, 
+.about-text, 
+section p, 
+.container p, 
+.content-area,
+article p {
+    color: #ffffff !important; /* Yazıları bembeyaz yapar */
+    opacity: 1 !important;
+    line-height: 1.6 !important;
+}
+
+/* 3. Sayfa Başlıklarını (Hakkımızda vb.) Görünür Yap */
+h2, h3 {
+    color: #ff4655 !important;
+    margin-bottom: 15px !important;
+}
+
+/* 4. Navigasyondaki Yazıların Rengini Sabitle */
+nav a {
+    color: #ffffff !important;
+}
+
+nav a:hover {
+    color: #ff4655 !important;
+}
+
+/* 5. Beyaz Sayfa Parlamasını Engellemek İçin Garanti Arka Plan */
+html, body {
+    background-color: #0a0c10 !important;
+}
