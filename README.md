@@ -64,7 +64,7 @@ Rate-limit kurallarına uygun şekilde kullanılmıştır.
 
 ## 🌐 Canlı Demo
 
-🔗 **GitHub Pages Linki:** https://kadirsahin78.github.io/animehub/about.html  
+🔗 **GitHub Pages Linki:** https://kadirsahin78.github.io/animehub/index.html
 
 ---
 
